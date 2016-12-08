@@ -17,11 +17,9 @@ default: &default
     # namespace: ''
 
   app:
-    front_end_url: 'http://localhost:3000'
+    front_end_url: 'http://localhost:3005'
 test:
   <<: *default
-  elastic_search:
-    host: "localhost:9201"
 
 development:
   <<: *default

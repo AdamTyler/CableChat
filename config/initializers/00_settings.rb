@@ -21,7 +21,7 @@ class Settings < Settingslogic
   Settings['cache']['namespace'] ||= "image_pipeline_#{Rails.env}"
 
   Settings['app']                  ||= Settingslogic.new({})
-  Settings['app']['front_end_url'] ||= "http://localhost:3000"
+  Settings['app']['front_end_url'] ||= "http://localhost:3005"
   Settings['app']['api_url']       ||= "https://websocket.roosterteeth.com"
 
 end
