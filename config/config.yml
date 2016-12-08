@@ -1,0 +1,30 @@
+default: &default
+  redis:
+    url: redis://localhost:6379/0
+  sessions:
+    # default
+    # key: '_cable-chat-session'
+    # default
+    # expire_after: <%= 2.days %>
+    # default
+    # key_prefix: 'cable-chat:session:'
+
+  cache:
+    # Redis url like redis://:some_password@localhost:6379/0
+    # Default:
+    # url: 'redis://localhost:6379/0'
+    # defaults to cable_chat_`Rails.env`
+    # namespace: ''
+
+  app:
+    front_end_url: 'http://localhost:3000'
+test:
+  <<: *default
+  elastic_search:
+    host: "localhost:9201"
+
+development:
+  <<: *default
+
+production:
+  <<: *default
